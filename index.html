@@ -136,6 +136,9 @@ footer img{height:30px;width:auto;display:block;margin-bottom:10px}
 @media (max-width:900px){.frases{grid-template-columns:repeat(2,1fr)}}
 @media (max-width:560px){.frases{gap:10px}}
 
+.ver{font-weight:600;font-size:12px;opacity:.75;margin-left:4px}
+.verchip{display:inline-flex;align-items:center;gap:6px;padding:8px 14px;border-radius:999px;border:1px solid rgba(34,197,94,.5);background:rgba(34,197,94,.12);color:#6EE7A0;font-size:14px;font-weight:600}
+.verchip b{color:var(--text)}
 .aviso{display:block;text-align:center;line-height:1.45;background:rgba(251,191,36,.12);border:1px solid rgba(251,191,36,.45);color:#FDE68A;border-radius:12px;padding:10px 16px;margin-top:14px;font-weight:600;font-size:15px}
 .aviso b{color:var(--gold)}
 .platform{display:inline-flex;gap:8px;flex-wrap:wrap;margin-top:12px}
@@ -154,7 +157,7 @@ footer img{height:30px;width:auto;display:block;margin-bottom:10px}
     <a class="l" href="#planos">Planos</a>
     <a class="l" href="#instalar">Instalar</a>
     <a class="l" href="#duvidas">Dúvidas</a>
-    <a class="btn btn-green" id="dl-top" href="#instalar" style="padding:11px 18px;min-height:42px;font-size:15px">Baixar</a>
+    <a class="btn btn-green" id="dl-top" href="#instalar" style="padding:11px 18px;min-height:42px;font-size:15px">Baixar <span class="ver">v38</span></a>
   </nav>
 </header>
 
@@ -297,6 +300,7 @@ footer img{height:30px;width:auto;display:block;margin-bottom:10px}
   </div>
   <div class="dl">
     <a class="btn btn-green" id="dl-main" href="#" rel="noopener">⬇ Baixar o ColorDrive</a>
+    <span class="verchip" id="verMain" title="Versão que você vai baixar">Versão <b>v38</b> · a mais recente</span>
     <span class="muted" style="font-size:14px">Arquivo .apk para Android. <b style="color:#FDE68A">Não funciona em iPhone (iOS).</b></span>
   </div>
   <p class="muted" style="margin-top:14px;font-size:14px;max-width:44em">O ColorDrive usa o recurso de Acessibilidade do Android só para ler a oferta na tela. Ele não aceita corridas, não lê senhas e guarda tudo no seu celular.</p>
@@ -326,6 +330,7 @@ footer img{height:30px;width:auto;display:block;margin-bottom:10px}
 /* ===== Configure aqui ===== */
 var DOWNLOAD_URL = "https://github.com/sr-andersoncastro/colordrive-download/raw/main/ColorDrive.apk";            /* cole o link do APK (GitHub Releases, Drive, seu site). Vazio = pede pelo WhatsApp. */
 var WHATS = "5551982318554";
+var APP_VERSION = "v38";          /* troque a cada versão nova. O site mostra ao lado dos botões de baixar. */
 /* ========================== */
 function wa(msg){ return "https://wa.me/" + WHATS + "?text=" + encodeURIComponent(msg); }
 (function(){
@@ -361,6 +366,16 @@ function wa(msg){ return "https://wa.me/" + WHATS + "?text=" + encodeURIComponen
     for(var i=0;i<fi.length;i++) fi[i].src=fi[i].getAttribute(on?"data-on":"data-off");
   }); }
 
+
+  /* versão ao lado dos botões de baixar */
+  (function(){
+    function put(v){
+      var a=document.querySelectorAll(".ver"); for(var i=0;i<a.length;i++) a[i].textContent=v;
+      var m=document.querySelector("#verMain b"); if(m) m.textContent=v;
+    }
+    put(APP_VERSION);
+    try{ fetch("versao.txt",{cache:"no-store"}).then(function(r){return r.ok?r.text():null;}).then(function(x){ if(x&&/^v\d+/.test(x.trim())) put(x.trim()); }).catch(function(){}); }catch(e){}
+  })();
 })();
 </script>
 
