@@ -1,9 +1,6 @@
-# ColorDrive
+# ColorDrive — download
 
-Assistente do motorista de aplicativo: mostra ganho por km e por hora no card da oferta.
+Baixe sempre a versão mais recente:
+https://github.com/sr-andersoncastro/colordrive-download/raw/main/ColorDrive.apk
 
-## Download
-
-Baixe o APK na pagina de Releases: https://github.com/sr-andersoncastro/colordrive-download/releases/latest
-
-Aplicativo independente, sem vinculo com Uber ou 99.
+Versão atual: v36.
