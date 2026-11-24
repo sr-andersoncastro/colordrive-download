@@ -5,6 +5,6 @@
 Baixe sempre a versão mais recente:
 https://github.com/sr-andersoncastro/colordrive-download/raw/main/ColorDrive.apk
 
-Versão atual: v51.
+Versão atual: v52.
 
 Site: https://colordrive.com.br
