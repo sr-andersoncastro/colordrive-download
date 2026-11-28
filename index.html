@@ -1,6 +1,6 @@
 <!doctype html>
 <html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<title>ColorDrive</title>
+<title>ColorDrive — Veja na hora se a corrida compensa (Uber e 99)</title>
 <meta name="claude:viewport-fit-sides" content="cover">
 <meta name="description" content="Veja na hora se a corrida compensa. O ColorDrive mostra o ganho por km e por hora num card colorido por cima da oferta do Uber Motorista e do 99 Motorista. Só para Android. Teste grátis por 7 dias.">
 <meta name="theme-color" content="#0A0E14">
@@ -199,6 +199,25 @@ footer img{height:70px;width:auto;display:block;margin-bottom:12px}
   header img{height:46px}
 }
 @media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+
+/* Novidades: vitrine de telas com texto */
+#novidades .lead2{font-size:21px;color:#C7CFDB;margin-top:16px;max-width:36em}
+#novidades .gal{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:34px}
+#novidades figure{margin:0;border-radius:18px;overflow:hidden;background:var(--panel);border:1px solid var(--line);transition:transform .2s,border-color .2s}
+#novidades figure:hover{transform:translateY(-4px);border-color:var(--gold)}
+#novidades figure a{display:block}
+#novidades figure img{display:block;width:100%;height:auto}
+#novidades figcaption{padding:14px 18px 18px;font-size:16px;line-height:1.4;color:#C7CFDB}
+#novidades figcaption b{display:block;font:800 28px var(--display);color:var(--text);margin-bottom:4px;letter-spacing:.01em}
+.tagnew{display:inline-block;margin-left:8px;font:700 12px var(--body);letter-spacing:.06em;text-transform:uppercase;background:var(--gold);color:#241a00;border-radius:999px;padding:3px 10px;vertical-align:middle}
+#novidades .ctacard{display:flex;flex-direction:column;justify-content:center;gap:14px;padding:30px 26px;border-radius:18px;border:2px solid var(--gold);background:linear-gradient(160deg,#16110a,#0b0f16);box-shadow:0 0 60px rgba(251,191,36,.12)}
+#novidades .ctacard h3{font-size:44px;line-height:1}
+#novidades .ctacard h3 em{font-style:normal;color:var(--gold)}
+#novidades .ctacard p{color:#C7CFDB;font-size:18px}
+#novidades .cta2{display:flex;gap:14px;flex-wrap:wrap;margin-top:34px}
+#novidades .nota2{margin-top:14px;font-size:14px;color:var(--muted)}
+@media(max-width:900px){#novidades .gal{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:600px){#novidades .gal{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;gap:14px;padding-bottom:12px;-webkit-overflow-scrolling:touch}#novidades figure,#novidades .ctacard{flex:0 0 84%;scroll-snap-align:center}}
 </style>
 </head><body>
 
@@ -239,6 +258,30 @@ footer img{height:70px;width:auto;display:block;margin-bottom:12px}
   </div>
 </div>
 </div>
+
+<section id="novidades"><div class="wrap">
+  <h2>Muito mais que um card.</h2>
+  <p class="lead2">O ColorDrive mostra se a corrida compensa e ainda cuida do seu dinheiro e do seu carro. Tudo no mesmo app.</p>
+  <div class="gal">
+    <figure><a href="img/painel-do-carro.webp" target="_blank" rel="noopener"><img src="img/painel-do-carro.webp" width="1080" height="1350" loading="lazy" alt="Painel do carro no celular com velocidade, giro, tanque, temperatura, bateria e consumo médio, feito pelo ColorDrive com adaptador OBD"></a>
+      <figcaption><b>Painel do carro <span class="tagnew">Novidade</span></b>Velocidade, giro, tanque, temperatura, bateria, consumo médio e km rodados, com um adaptador OBD (ELM327).</figcaption></figure>
+    <figure><a href="img/financeiro.webp" target="_blank" rel="noopener"><img src="img/financeiro.webp" width="1080" height="1350" loading="lazy" alt="Tela Financeiro do ColorDrive com ganhos, gastos e lucro do mês"></a>
+      <figcaption><b>Financeiro <span class="tagnew">Novidade</span></b>Ganhos, combustível, manutenção, gastos fixos e pessoais. Veja o lucro por km e por hora.</figcaption></figure>
+    <figure><a href="img/historico-de-ofertas.webp" target="_blank" rel="noopener"><img src="img/historico-de-ofertas.webp" width="1080" height="1350" loading="lazy" alt="Histórico de ofertas do ColorDrive com cores verde, amarela e vermelha para cada corrida do Uber e da 99"></a>
+      <figcaption><b>Histórico colorido</b>Toda oferta fica guardada, com ganho por km, por hora e por minuto. Filtre por Uber ou 99.</figcaption></figure>
+    <figure><a href="img/radar-melhores-horas.webp" target="_blank" rel="noopener"><img src="img/radar-melhores-horas.webp" width="1080" height="1350" loading="lazy" alt="Radar de oportunidades do ColorDrive com as melhores horas e os melhores bairros para rodar"></a>
+      <figcaption><b>Radar de oportunidades</b>As melhores horas e os melhores bairros do seu dia, aprendidos com as ofertas que você mesmo recebe.</figcaption></figure>
+    <figure><a href="img/configuracoes.webp" target="_blank" rel="noopener"><img src="img/configuracoes.webp" width="1080" height="1350" loading="lazy" alt="Configurações do ColorDrive para escolher o que aparece no card e definir a meta de reais por km"></a>
+      <figcaption><b>Do seu jeito</b>Escolha o que aparece no card, defina a sua meta de R$/km e ligue só o que você usa.</figcaption></figure>
+    <div class="ctacard">
+      <h3>Rode com <em>mais certeza</em>.</h3>
+      <p>Aceite o que paga bem e recuse o que não compensa, com o card na tela e o financeiro na mão. Teste grátis por 7 dias.</p>
+      <a class="btn btn-green" href="#instalar">Baixar o ColorDrive</a>
+      <a class="btn btn-line" href="https://wa.me/5551982318554" target="_blank" rel="noopener">Falar no WhatsApp</a>
+    </div>
+  </div>
+  <p class="nota2">Teste grátis por 7 dias. Só para Android. As telas marcadas como novidade chegam na próxima atualização do app. A imagem do painel mostra valores de exemplo.</p>
+</div></section>
 
 <section id="como" class="show"><div class="wrap">
   <h2>O app por dentro.</h2>
